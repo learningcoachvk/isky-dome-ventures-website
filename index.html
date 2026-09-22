@@ -11,6 +11,16 @@
 </head>
 <body>
 
+<!-- ============ PRELOADER ============ -->
+<div id="preloader">
+  <div class="preloader-mark">
+    <svg viewBox="0 0 64 64" fill="none">
+      <path d="M4 50 A28 28 0 0 1 60 50 Z M4 50 L32 8 L60 50 M18 50 L32 8 L46 50 M32 8 V50 M4 50 L32 30 L60 50" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="preloader-bar"></div>
+</div>
+
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="container nav-inner">
@@ -21,10 +31,10 @@
     <nav class="nav-links" id="navLinks">
       <a href="#showcase" class="nav-link">Showcase</a>
       <a href="#typologies" class="nav-link">Typologies</a>
-      <a href="#materials" class="nav-link">Science &amp; Materials</a>
+      <a href="#materials" class="nav-link">Materials</a>
       <a href="#portfolio" class="nav-link">Portfolio</a>
-      <a href="#field" class="nav-link">From the Field</a>
-      <a href="#process" class="nav-link">Turnkey Process</a>
+      <a href="#process" class="nav-link">Process</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
       <a href="#connect" class="nav-link">Connect</a>
       <div class="nav-cta-mobile">
         <a href="#connect" class="btn btn-gold">Start Your Project</a>
@@ -56,16 +66,16 @@
       <div class="hero-grid">
         <div>
           <div class="hero-kicker"><span class="dot geo-badge"><svg viewBox="0 0 40 24" fill="none"><path d="M2 22 A18 18 0 0 1 38 22 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 22 L20 4 L38 22 M11 22 L20 4 L29 22 M20 4 V22 M2 22 L20 13 L38 22" stroke="currentColor" stroke-width="1" stroke-linejoin="round" opacity="0.9"/><line x1="2" y1="22" x2="38" y2="22" stroke="currentColor" stroke-width="1.6"/></svg></span> Modular &amp; Sustainable Experiential Architecture</div>
-          <h1 class="reveal in">Live Beyond<br><em>Four Walls.</em></h1>
-          <p class="hero-sub reveal in reveal-delay-1">iSky Dome Ventures designs, fabricates and installs geodesic domes, alpine cabins and bespoke landmark structures — dry-built, relocatable, and engineered for India's hill stations, forests and coastlines.</p>
-          <div class="hero-actions reveal in reveal-delay-2">
+          <h1 id="heroSplit" class="split-target">Live Beyond<br><em>Four Walls.</em></h1>
+          <p class="hero-sub">iSky Dome Ventures designs, fabricates and installs geodesic domes, alpine cabins and bespoke landmark structures — dry-built, relocatable, and engineered for India's hill stations, forests and coastlines.</p>
+          <div class="hero-actions">
             <a href="#connect" class="btn btn-gold">Get a Free Project Consultation
               <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a href="#typologies" class="btn btn-outline">Explore Structures</a>
           </div>
         </div>
-        <div class="hero-stats reveal in reveal-delay-2">
+        <div class="hero-stats">
           <div class="hero-stat"><div class="num"><span data-count="70">0</span><span class="suffix">%</span></div><div class="label">Faster than wet-construction builds</div></div>
           <div class="hero-stat"><div class="num"><span data-count="6">0</span><span class="suffix">+</span></div><div class="label">Hill-station terrains engineered for</div></div>
           <div class="hero-stat"><div class="num"><span data-count="2018">0</span></div><div class="label">Pioneering geo-friendly design since</div></div>
@@ -92,8 +102,9 @@
 <section class="section" id="typologies">
   <div class="container">
     <div class="section-head reveal">
+      <div class="divider-draw"></div>
       <div class="eyebrow">Living Concepts</div>
-      <h2>Signature structural typologies.</h2>
+      <h2 class="split-target">Signature structural typologies.</h2>
       <p>Every build begins off-site, precision-cut and dry-fitted, then assembled on terrain that would defeat conventional masonry. Explore the four typology families we engineer.</p>
     </div>
 
@@ -176,6 +187,58 @@
   </div>
 </section>
 
+<!-- ============ BESPOKE CONCEPTS ============ -->
+<section class="section section-dark" id="bespoke-concepts">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="divider-draw"></div>
+      <div class="eyebrow">Unlimited Living Concepts</div>
+      <h2 class="split-target" style="color:#fff;">If you can dream it, we can engineer it.</h2>
+      <p>Client imagination is the only design constraint. We don't restrict any property to catalog shapes — from an aeroplane-fuselage villa to a wall-free biophilic sanctuary, our design and fabrication teams engineer the concept into reality from the ground up.</p>
+    </div>
+
+    <div class="bespoke-grid">
+      <div class="bespoke-card">
+        <span class="bespoke-num">01</span>
+        <div class="bespoke-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M2 16l20-6-4 8 4 8-20-6v-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 16h13" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h3>Unrestricted Thematic Living</h3>
+        <p>From full aeroplane-fuselage luxury suites and maritime ship homes to cantilevered hillside viewing pods and upside-down architectural icons — every boundary-pushing layout is engineered for absolute structural integrity.</p>
+        <div class="examples"><span>Aeroplane Villas</span><span>Ship Homes</span><span>Upside-Down Icons</span></div>
+      </div>
+      <div class="bespoke-card">
+        <span class="bespoke-num">02</span>
+        <div class="bespoke-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V10l7-6 7 6v11" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h3>Earthy Vernacular &amp; Natural Systems</h3>
+        <p>Authentic mud houses, stabilized earth blocks, natural stone detailing, treated structural bamboo frames and insulated breathable thatch roofs — ancient thermal wisdom engineered with modern precision.</p>
+        <div class="examples"><span>Mud Houses</span><span>Stabilized Earth</span><span>Stone &amp; Bamboo</span></div>
+      </div>
+      <div class="bespoke-card">
+        <span class="bespoke-num">03</span>
+        <div class="bespoke-ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="6" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M4 21v-6a8 8 0 0116 0v6" stroke="currentColor" stroke-width="1.6"/><path d="M4 21h16" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h3>Biophilic &amp; Open-to-Sky Living</h3>
+        <p>Wall-free pavilions, internal garden courtyards, sunken stargazing lounges and integrated airflow breezeways — where natural landscape and panoramic sky become the interior decor.</p>
+        <div class="examples"><span>Wall-Free Pavilions</span><span>OTS Courtyards</span><span>Stargazing Atriums</span></div>
+      </div>
+    </div>
+
+    <div class="roi-strip reveal">
+      <div class="roi-item"><div class="roi-k">0 ₹</div><h4>Organic Viral Marketing</h4><p>Iconic, novel structures naturally trigger guest photo-sharing and travel reels — zero-cost reach and constant waiting lists.</p></div>
+      <div class="roi-item"><div class="roi-k">2–3x</div><h4>Premium Nightly Tariffs</h4><p>Travelers actively seek transformative stays over conventional rooms — commanding 2 to 3x higher rates than regional inventory.</p></div>
+      <div class="roi-item"><div class="roi-k">70%</div><h4>Accelerated Time-to-Market</h4><p>Off-site fabrication and modular dry assembly reach positive cash flow months ahead of standard builds.</p></div>
+    </div>
+
+    <div class="bespoke-cta reveal">
+      <div>
+        <h4>Have an idea that doesn't fit a category?</h4>
+        <p>Submit your custom concept and we'll scope feasibility, materials and budget — no catalog required.</p>
+      </div>
+      <a href="#connect" id="bespokeCta" class="btn btn-gold">Submit Your Custom Concept
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 3. SCIENCE & MATERIALS ============ -->
 <section class="section section-dark" id="materials">
   <div class="container">
@@ -187,7 +250,7 @@
       </div>
       <div>
         <div class="eyebrow">The Sustainable "Dry" Difference</div>
-        <h2 style="font-size:clamp(2rem,4vw,2.9rem);color:#fff;margin-bottom:20px;">Why we never mix a bag of cement.</h2>
+        <h2 class="split-target" style="font-size:clamp(2rem,4vw,2.9rem);color:#fff;margin-bottom:20px;">Why we never mix a bag of cement.</h2>
         <p style="color:rgba(247,244,236,.65);margin-bottom:8px;max-width:560px;">No wet mortar, no brick, no curing time. Every material is chosen for longevity, thermal performance and high-recovery resale value — click each layer to learn more.</p>
 
         <div class="material-list reveal-delay-1 reveal">
@@ -229,8 +292,9 @@
 <section class="section" id="portfolio">
   <div class="container">
     <div class="section-head reveal">
+      <div class="divider-draw"></div>
       <div class="eyebrow">Geographic Footprint &amp; Craftsmanship</div>
-      <h2>Built for terrain that says no to ordinary construction.</h2>
+      <h2 class="split-target">Built for terrain that says no to ordinary construction.</h2>
       <p>A representative look at the forms we build — filter by setting, or scroll our proven and pipeline geography below.</p>
     </div>
 
@@ -289,8 +353,9 @@
 <section class="section" id="field">
   <div class="container">
     <div class="section-head reveal">
+      <div class="divider-draw"></div>
       <div class="eyebrow">Raw &amp; Unfiltered</div>
-      <h2>Real installs, real terrain, real weather.</h2>
+      <h2 class="split-target">Real installs, real terrain, real weather.</h2>
       <p>Handheld and drone footage straight from live sites and partner resorts — tap a clip to play.</p>
     </div>
 
@@ -352,8 +417,9 @@
 <section class="section section-dark" id="process">
   <div class="container">
     <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <div class="divider-draw" style="margin-left:auto;margin-right:auto;"></div>
       <div class="eyebrow" style="justify-content:center;">From Blueprint To Handover</div>
-      <h2 style="color:#fff;">A turnkey process, powered by a five-member core.</h2>
+      <h2 class="split-target" style="color:#fff;">A turnkey process, powered by a five-member core.</h2>
       <p>Backed by dedicated fabrication, carpentry, electrical and plumbing trade units — every project moves through five disciplined stages.</p>
     </div>
 
@@ -384,12 +450,98 @@
   </div>
 </section>
 
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="divider-draw"></div>
+      <div class="eyebrow">Verified Client Testimonials</div>
+      <h2 class="split-target">Proof, from the people who signed the cheques.</h2>
+      <p>Completed resort and farmhouse builds alongside live, ongoing community developments — every project below is a real client engagement.</p>
+    </div>
+
+    <div class="testi-filters reveal">
+      <button class="filter-btn testi-filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn testi-filter-btn" data-filter="hospitality">Hospitality &amp; Farmstays</button>
+      <button class="filter-btn testi-filter-btn" data-filter="rural">Rural &amp; Infrastructure</button>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card wide" data-cat="rural">
+        <div class="testi-media">
+          <img src="assets/img/dome-row-clouds.jpg" alt="Geodesic domes under an open sky, representative of rural infrastructure deployment" loading="lazy">
+          <span class="testi-status ongoing">Ongoing Deployment</span>
+        </div>
+        <div class="testi-body">
+          <div class="testi-stars">★★★★★</div>
+          <h3>Roma Infrastructure</h3>
+          <div class="testi-scope">Rural Development · 4× 5-Meter Geodesic Domes · Pachamalai Hills</div>
+          <p class="testi-quote">"Implementing sustainable, remote infrastructure at Pachamalai demanded an engineering partner capable of rapid mobilization without relying on heavy civil supply chains. iSky Dome Ventures is executing our four 5-meter dome units with exceptional precision. Their dry-assembly modular systems perfectly match our rural ecological goals while ensuring top-tier weather protection and longevity."</p>
+        </div>
+      </div>
+
+      <div class="testi-card" data-cat="hospitality">
+        <div class="testi-media">
+          <img src="assets/img/dome-entrance-door.jpg" alt="Carved wooden dome entrance, representative of the Hill View Dome farmhouse suite" loading="lazy">
+          <span class="testi-status completed">Completed</span>
+        </div>
+        <div class="testi-body">
+          <div class="testi-stars">★★★★★</div>
+          <h3>Mrs. Vijaya Shekar — Zen Space</h3>
+          <div class="testi-scope">Hill View Dome · Sanctity Ferme, Shoolagiri</div>
+          <p class="testi-quote">"iSky Dome Ventures brought our vision for Zen Space to life with the Hill View Dome at Sanctity Ferme. The dry-construction process was seamless, remarkably swift, and completely preserved the natural rocky terrain. The thermal insulation and 360° panoramic outlook provide an exceptional, tranquil retreat our guests truly cherish."</p>
+        </div>
+      </div>
+
+      <div class="testi-card" data-cat="hospitality">
+        <div class="testi-media">
+          <img src="assets/img/aerial-dome-mountains.jpg" alt="Dome deployment with mountain backdrop, representative of the Kodaikanal living domes" loading="lazy">
+          <span class="testi-status completed">Completed</span>
+        </div>
+        <div class="testi-body">
+          <div class="testi-stars">★★★★★</div>
+          <h3>Tomorrowland Farms &amp; Suites</h3>
+          <div class="testi-scope">Two 7-Meter Geodesic Living Domes · Kodaikanal, Tamil Nadu</div>
+          <p class="testi-quote">"Investing in two 7-meter living domes with iSky Dome Ventures has been a decisive milestone for Tomorrowland Farms &amp; Suites. Their structural engineering, thermal performance against Kodaikanal's mountain chill, and distinctive aesthetic immediately elevated our weekend occupancy and direct bookings. Turnkey execution was professional, precise and punctual."</p>
+        </div>
+      </div>
+
+      <div class="testi-card" data-cat="hospitality">
+        <div class="testi-media">
+          <img src="assets/img/glass-floor-treehouse.jpg" alt="Immersive glass-floor deck, representative of the twin experiential living domes" loading="lazy">
+          <span class="testi-status completed">Completed</span>
+        </div>
+        <div class="testi-body">
+          <div class="testi-stars">★★★★★</div>
+          <h3>The Nest by Xacro Xperiences</h3>
+          <div class="testi-scope">Twin 5-Meter Experiential Living Domes · Kodaikanal, Tamil Nadu</div>
+          <p class="testi-quote">"Our experiential staycations demand exceptional visual character and robust durability. The two 5-meter dome units built by iSky Dome Ventures delivered on every front: rapid on-site assembly, dependable weather-tight sealing in misty weather, and an unforgettable immersive environment that our travelers love to capture and share."</p>
+        </div>
+      </div>
+
+      <div class="testi-card" data-cat="hospitality">
+        <div class="testi-media">
+          <img src="assets/img/field-villagio-wayanad-poster.jpg" alt="La Villagio Dome Suites garden approach path, Wayanad" loading="lazy">
+          <span class="testi-status completed">Completed</span>
+        </div>
+        <div class="testi-body">
+          <div class="testi-stars">★★★★★</div>
+          <h3>La Villagio Dome Suites</h3>
+          <div class="testi-scope">Four 7-Meter Luxury Geodesic Suites · Wayanad, Kerala</div>
+          <p class="testi-quote">"Erecting four large 7-meter dome suites across the high-rainfall, sloped terrain of Wayanad required serious engineering precision. iSky Dome Ventures handled the challenging geography effortlessly using lightweight, high-performance structural systems. These domes now stand as our flagship visual landmark and command premium tariffs all year round."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 6. CONNECT ============ -->
 <section class="section" id="connect">
   <div class="container">
     <div class="section-head reveal">
+      <div class="divider-draw"></div>
       <div class="eyebrow">Smart Scoping</div>
-      <h2>Tell us about your land. We'll do the rest.</h2>
+      <h2 class="split-target">Tell us about your land. We'll do the rest.</h2>
       <p>Fill in a few details and we'll reach out with a tailored proposal — or skip straight to WhatsApp for an instant conversation.</p>
     </div>
 
@@ -504,9 +656,11 @@
         <ul>
           <li><a href="#showcase">Showcase</a></li>
           <li><a href="#typologies">Typologies</a></li>
+          <li><a href="#bespoke-concepts">Bespoke Concepts</a></li>
           <li><a href="#materials">Science &amp; Materials</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#process">Process</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
         </ul>
       </div>
       <div>
@@ -547,6 +701,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
