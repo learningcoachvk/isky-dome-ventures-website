@@ -161,7 +161,7 @@ function setupStagger(groupSelector, itemSelector, extraClasses) {
     });
   });
 }
-setupStagger('.portfolio-grid', '.p-item', ['reveal-img']);
+setupStagger('.portfolio-carousel', '.p-item', ['reveal-img']);
 setupStagger('.testi-grid', '.testi-card');
 setupStagger('.bespoke-grid', '.bespoke-card');
 setupStagger('.roi-strip', '.roi-item');
@@ -169,12 +169,15 @@ setupStagger('.footprint-list', '.footprint-row');
 document.querySelectorAll('.typology-media, .materials-media, .testi-media').forEach(el => el.classList.add('reveal-img'));
 
 /* ---------- REVEAL ON SCROLL (unified) ---------- */
+const isMobileViewport = window.innerWidth < 760;
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     const el = entry.target;
     if (el.dataset.staggerIndex !== undefined) {
-      el.style.transitionDelay = Math.min(parseInt(el.dataset.staggerIndex, 10), 8) * 80 + 'ms';
+      const step = isMobileViewport ? 45 : 80;
+      const cap = isMobileViewport ? 4 : 8;
+      el.style.transitionDelay = Math.min(parseInt(el.dataset.staggerIndex, 10), cap) * step + 'ms';
     }
     if (el.classList.contains('split-target')) {
       revealSplit(el);
@@ -279,23 +282,19 @@ document.getElementById('bespokeCta')?.addEventListener('click', (e) => {
   smoothScrollTo(document.getElementById('connect'));
 });
 
-/* ---------- LIGHTBOX ---------- */
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxCap = document.getElementById('lightboxCap');
-document.querySelectorAll('.p-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const img = item.querySelector('img');
-    const title = item.querySelector('h4')?.textContent || '';
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightboxCap.textContent = title;
-    lightbox.classList.add('open');
-  });
-});
-document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
-lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('open'); });
-window.addEventListener('keydown', (e) => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
+/* ---------- PORTFOLIO CAROUSEL ARROWS ---------- */
+(function initPortfolioCarousel() {
+  const track = document.getElementById('portfolioCarousel');
+  const prev = document.getElementById('portfolioPrev');
+  const next = document.getElementById('portfolioNext');
+  if (!track || !prev || !next) return;
+  function step() {
+    const item = track.querySelector('.p-item:not(.hidden)');
+    return (item ? item.getBoundingClientRect().width : 300) + 20;
+  }
+  prev.addEventListener('click', () => track.scrollBy({ left: -step() * 2, behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: step() * 2, behavior: 'smooth' }));
+})();
 
 /* ---------- PROCESS SCROLL FILL ---------- */
 const processList = document.querySelector('.process-list');
